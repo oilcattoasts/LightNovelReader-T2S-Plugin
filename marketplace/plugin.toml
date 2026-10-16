@@ -1,0 +1,51 @@
+id = "org.lnr.t2s"
+name = "繁体转简体"
+author = "LNR T2S Plugin Contributors"
+categories = ["novel"]
+summary = "离线繁体转简体，支持正文、书名和目录，保留原始缓存。"
+is_nsfw = false
+
+description = """
+为 LightNovelReader 提供离线繁体转简体功能。
+
+• 转换章节正文、章节标题、书名、简介及目录。
+• OpenCC 词典，词组优先匹配，保留原始缓存。
+• 全局开关，设置保存在本机；不会上传书籍内容。
+• 保留图片和其他组件，不转换图片中的文字。
+
+适用于 LightNovelReader 1.2.3d（API 3），不适用于 API 4 开发版。
+启用前请关闭宿主的“简转繁”。修改设置后重新进入章节；更新插件后请重启阅读器。
+EPUB 导出沿用当前转换设置。
+
+插件源码和 OpenCC 词典采用 Apache-2.0 许可。
+"""
+
+target_api = 3
+languages = ["zh-CN"]
+copyright = "© 2026 LNR T2S Plugin Contributors"
+
+[release]
+version_name = "0.1.3"
+version_code = 4
+changelog = """
+首个市场分发版本：
+1. 离线繁体转简体，支持正文和书籍信息。
+2. 保留异步加载对象的更新关系，修复最近阅读持续加载。
+3. 与宿主对齐 Java 时间兼容转换，修复加载后或打开详情时闪退。
+4. 通过自动测试、DEX 接口校验及用户在 1.2.3d 上的运行确认。
+"""
+
+[release.download]
+file = "plugin.lnrp"
+output_file = "LightNovelReader-T2S-0.1.3-api3.apk.lnrp"
+sha1 = "54cea5bde28bc648d6ff5da1769e447975d40d5f"
+
+[privacy]
+data_keys = []
+notes = "所有转换在本机完成，仅保存启用开关，不采集或上传书籍内容和个人信息。"
+
+[links]
+homepage = "https://github.com/oilcattoasts/LightNovelReader-T2S-Plugin"
+
+[assets]
+icon = "icon.png"
